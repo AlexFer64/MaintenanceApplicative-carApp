@@ -13,6 +13,25 @@ public class Voiture {
         return this.vitesse;
     }
 
+    public String getModele(){
+        return this.modele;
+    }
+
+    public String getCouleur(){
+        return this.couleur;
+    }
+
+    public void setVitesse(int vitesse){
+        this.vitesse = vitesse;
+    }
+
+    public void setModele(String modele){
+        this.modele = modele;
+    }
+
+    public void setCouleur(String couleur){
+        this.couleur = couleur;
+    }
     public void accelerer() {
         if (vitesse + 10 <= 120) {
             vitesse += 10;

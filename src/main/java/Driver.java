@@ -22,6 +22,42 @@ public class Driver {
     }
 
     /**
+     * Gets the name of the driver.
+     *
+     * @return The name of the driver.
+     */
+    public String getName(){
+        return this.name;
+    }
+
+    /**
+     * Gets the age of the driver.
+     *
+     * @return The age of the driver.
+     */
+    public int getAge(){
+        return this.age;
+    }
+
+    /**
+     * Sets the name of the driver.
+     *
+     * @param name The name to set.
+     */
+    public void setName(String name){
+         this.name = name;
+    }
+
+    /**
+     * Sets the age of the driver.
+     *
+     * @param age The age to set.
+     */
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    /**
      * Checks if the driver is considered an adult based on the legal driving age.
      *
      * @return True if the driver is an adult, false otherwise.
@@ -36,7 +72,7 @@ public class Driver {
      */
     public void startCar() {
         if (isAdult()) {
-            System.out.println(name + " starts the car.");
+            System.out.println(this.name + " starts the car.");
         } else {
             System.out.println("The driver is not old enough to drive.");
         }
@@ -46,7 +82,7 @@ public class Driver {
      * Stops the car.
      */
     public void stopCar() {
-        System.out.println(name + " stops the car.");
+        System.out.println(this.name + " stops the car.");
     }
 
     /**
@@ -56,7 +92,7 @@ public class Driver {
      * @param newSpeed The new speed to set for the car.
      */
     public void changeSpeed(Car car, int newSpeed) {
-        System.out.println(name + " changes the speed of the car to " + newSpeed);
+        System.out.println(this.name + " changes the speed of the car to " + newSpeed);
         car.accelerate();
     }
 }

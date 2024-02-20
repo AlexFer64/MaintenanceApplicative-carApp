@@ -1,13 +1,17 @@
 public class Application {
     public static void main(String[] args) {
-        Car myCar = new Car("Sedan", "Bleu");
-        Driver moi = new Driver("John", 20);
 
-        moi.startCar();
+        //Create a new car.
+        Car myCar = new Car("Sedan", "Bleu");
+
+        //Create a driver.
+        Driver myDriver = new Driver("John", 20);
+
+        myDriver.startCar();
         myCar.accelerate();
-        moi.changeSpeed(myCar, 80);
+        myDriver.changeSpeed(myCar, 80);
         myCar.decelerate();
-        moi.stopCar();
+        myDriver.stopCar();
         myCar.displayDetails();
     }
 }

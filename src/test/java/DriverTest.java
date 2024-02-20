@@ -2,38 +2,38 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ConducteurTest {
+public class DriverTest {
 
-    private Conducteur conducteur;
+    private Driver driver;
 
     @BeforeEach
     public void setUp() {
-        conducteur = new Conducteur("John", 20);
+        driver = new Driver("John", 20);
     }
 
     @Test
     public void testEstAdulte() {
-        assertThat(conducteur.estAdulte()).isTrue();
+        assertThat(driver.isAdult()).isTrue();
     }
 
     @Test
     public void testDemarrerVoiture() {
         Car car = new Car("Sedan", "Bleu");
-        conducteur.demarrerVoiture(car);
+        driver.startCar();
         // How to assert that the demarrerVoiture method was called?
     }
 
     @Test
     public void testArreterVoiture() {
         Car car = new Car("Sedan", "Bleu");
-        conducteur.arreterVoiture(car);
+        driver.stopCar();
         // How to assert that the arreterVoiture method was called?
     }
 
     @Test
     public void testChangerVitesse() {
         Car car = new Car("Sedan", "Bleu");
-        conducteur.changerVitesse(car, 80);
+        driver.changeSpeed(car, 80);
         assertThat(car.getVitesse()).isEqualTo(10);
     }
 }

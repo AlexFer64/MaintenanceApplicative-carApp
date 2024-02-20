@@ -2,6 +2,8 @@
  * Represents a car object with model, color, and speed attributes.
  */
 public class Car {
+    public static final int additionalSpeed = 10;
+    public static final int limitSpeed = 120;
     /** The model of the car. */
     private String model;
     /** The color of the car. */
@@ -79,10 +81,10 @@ public class Car {
      * Increases the speed of the car by 10, up to a maximum of 120.
      */
     public void accelerate() {
-        int ExpectedSpeed = this.speed + 10;
+        int ExpectedSpeed = this.speed + additionalSpeed;
 
-        if (ExpectedSpeed <= 120) {
-            speed += 10;
+        if (ExpectedSpeed <= limitSpeed) {
+            this.speed += additionalSpeed;
             displayDetails();
         } else {
             System.out.println("Maximum speed reached.");
@@ -93,10 +95,10 @@ public class Car {
      * Decreases the speed of the car by 10, stopping at 0.
      */
     public void decelerate() {
-        int ExpectedSpeed = this.speed - 10;
+        int ExpectedSpeed = this.speed - additionalSpeed;
 
         if (ExpectedSpeed >= 0) {
-            speed -= 10;
+            this.speed -= additionalSpeed;
             displayDetails();
         } else {
             System.out.println("The car is already stopped.");
